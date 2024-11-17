@@ -1,0 +1,15 @@
+<div *ngFor="let profile of profiles" class="card mb-3">
+  
+    
+      <div class="card-body">
+    <h5 class="card-title">{{ profile.name }}</h5>
+    <p class="card-text"><strong>Headline:</strong> {{ profile.headline }}</p>
+    <p class="card-text"><strong>Location:</strong> {{ profile.address }}</p>
+    <a [href]="profile.url" target="_blank" class="btn btn-primary">View LinkedIn Profile</a>
+  </div>
+</div>
+
+<!-- Optional: Show a message if no profiles are found -->
+<div *ngIf="profiles.length === 0">
+  <p>No profiles available.</p>
+</div>
